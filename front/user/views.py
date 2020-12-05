@@ -13,8 +13,8 @@ def default(request):
 
 def user(request):
     #TODO: Fix this render
-    #TODO: Connect this to the API
     
     users = be().get_user()
 
-    return HttpResponse(users)
+    #return HttpResponse(users)
+    return render(request, 'base.html')
