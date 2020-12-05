@@ -9,3 +9,4 @@ class BackEnd():
 
         response = requests.get(url)
         return response.json()
+        #return response.json()
