@@ -18,7 +18,8 @@ from django.urls import path
 from user import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.default, name="Landing"),
+    path('admin/',  admin.site.urls),
+    path('',        views.default, name="Landing"),
+    path('user',    views.user, name="User"),
     
 ]
