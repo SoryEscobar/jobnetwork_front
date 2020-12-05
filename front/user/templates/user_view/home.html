@@ -1,0 +1,8 @@
+<!-- base.html -->
+{% extends "base.html" %} {% block content %}
+<ul>
+  {% for user in users %}
+  <li>{{ user.title }}</li>
+  {% endfor %}
+</ul>
+{% endblock content %}

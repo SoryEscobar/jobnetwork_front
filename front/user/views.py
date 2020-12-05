@@ -17,4 +17,4 @@ def user(request):
     users = be().get_user()
 
     #return HttpResponse(users)
-    return render(request, 'base.html')
+    return render(request, 'user_view/home.html', {"users": users})
