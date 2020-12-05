@@ -1,8 +1,22 @@
 <!-- base.html -->
-{% extends "base.html" %} {% block content %}
-<ul>
-  {% for user in users %}
-  <li>{{ user.title }}</li>
-  {% endfor %}
-</ul>
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="col-md-6 col-auto">
+
+    <div class="card">
+        <div class="card-header">
+            Users
+        </div>
+        <ul class="list-group list-group-flush">
+
+            {% for user in users %}
+            <li class="list-group-item">{{ user.title }}</li>
+            {% endfor %}
+
+        </ul>
+    </div>
+</div>
+
 {% endblock content %}
