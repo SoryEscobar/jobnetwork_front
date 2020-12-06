@@ -3,22 +3,20 @@
 
 {% block content %}
 
-<div class="col-md-6 col-auto">
 
-    <div class="card">
-        <div class="card-header">
-            Users
+<div class="list-group">
+
+    {% for user in users %}
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{ user.name }}</h5>
+            <small>{{ user.locationName }}</small>
         </div>
-        <ul class="list-group list-group-flush">
+        <p class="mb-1">{{ user.professionalHeadline }}</p>
+        <small>{{ user.username }}</small>
+    </a>
+    {% endfor %}
 
-            {% for user in users %}
-
-            <li class="list-group-item">{{ user.name }}</li>
-
-            {% endfor %}
-
-        </ul>
-    </div>
 </div>
 
 {% endblock content %}
