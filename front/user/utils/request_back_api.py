@@ -1,4 +1,6 @@
 import requests
+import json
+import urllib
 
 
 class BackEnd():
@@ -7,6 +9,7 @@ class BackEnd():
         #TODO: Change this at Deployment for the Heroku address
         url = 'http://localhost:5000/user'
 
-        response = requests.get(url)
-        return response.json()
+        response = requests.post(url)
+        r = response.json()
+        return r
         #return response.json()

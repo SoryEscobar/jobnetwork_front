@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.http import JsonResponse
 from .utils.request_back_api import BackEnd as be
 
 
@@ -16,5 +17,5 @@ def user(request):
     
     users = be().get_user()
 
-    #return HttpResponse(users)
-    return render(request, 'user_view/home.html', {"users": users})
+    #return JsonResponse({"users":users})
+    return render(request, 'user_view/home.html', {"users": users['results']})
