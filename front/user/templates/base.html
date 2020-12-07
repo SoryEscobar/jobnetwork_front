@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tecnical Challenge Torre</title>
+        <title>Tecnical Challenge Torre: Sory Escobar</title>
 
         <link
             rel="stylesheet"
@@ -14,17 +14,17 @@
             />
     </head>
 
-    <body align="center">
+        <body align="center">
+        <ul data-v-4eff3b31=""></ul>
         <h2 class="text-center">{{ pagetitle }}</h2>
 
 
         <div class="container">
             <a href="{% url 'user:User' %}" class="btn btn-primary btn-lg activate" role="button" aria-disabled="true">Users</a>
             <a href="{% url 'job:Job' %}" class="btn btn-primary btn-lg activate" role="button" aria-disabled="true">Jobs</a>
-
+            <ul data-v-4eff3b31=""></ul>
             {% block content %} 
             {% endblock content %}
-
         </div>
 
     </body>

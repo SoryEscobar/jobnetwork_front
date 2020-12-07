@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.http import JsonResponse
 from front.utilities.request_back_api import BackEndServiceConnection as be_api
@@ -8,10 +8,16 @@ from front.utilities.request_back_api import BackEndServiceConnection as be_api
 
 
 def default(request):
-    return HttpResponse('<p>The fontend is online!</>')
+    #return HttpResponse('<p>The fontend is online!</>')
+    return redirect('/users')
     
         
 
 def user(request):
     users = be_api().post('user')
     return render(request, 'users.html', {"users": users['results'], "pagetitle": "Users from POST"})
+
+
+def user_id(request, username=None):
+    user = be_api().get(f'user/{username}')
+    return render(request, 'user.html', {"person": user['person'], "stats": user['stats'], "pagetitle": "User from GET"})

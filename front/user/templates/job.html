@@ -1,0 +1,32 @@
+<!-- base.html -->
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+<div data-v-4eff3b31="" class="md-card-content search-result-card__content"><div data-v-4eff3b31="" class="search-result-card__entity"><div data-v-4eff3b31="" class="search-result-card__entity-data"><div data-v-4eff3b31="" class="search-result-card__entity-picture entity-picture entity-picture--is-hexagon entity-picture--has-shadow" border-color="#FFFFFF" style="--size:64px; --font-size:28px; --border-width:5px; --box-shadow:0px 2px 4px rgba(0,0,0,0.5);"><div class="hexagon-border hexagon-border--no-margins"></div> 
+                <ul data-v-4eff3b31=""></ul>
+                <img class="entity-picture__thumbnail entity-picture__thumbnail--image entity-picture__thumbnail--no-margins" src={{ organization.logo }}>
+                <ul data-v-4eff3b31=""> </ul>
+                <h3 data-v-4eff3b31="" class="md-subheading-1">
+                    <span data-v-4eff3b31="" class="search-result-card__entity-name">{{ serpTags.title }}</span>
+                </h3>
+
+                <h5 data-v-4eff3b31="" class="md-subheading-1">
+                    <span data-v-4eff3b31="" class="search-result-card__entity-name">{{ organization.name }}</span>
+                </h5>
+                <ul data-v-4eff3b31=""> </ul><ul data-v-4eff3b31=""> </ul> <ul data-v-4eff3b31=""> </ul>
+
+                <div data-v-4eff3b31="" class="search-result-card__interests" style="--size:64px; --font-size:28px; --border-width:5px; --box-shadow:0px 2px 4px rgba(0,0,0,0.5);">
+                    {{ serpTags.description }}
+                </div>
+
+            </div>
+
+        </div></div>
+
+
+
+
+        {% endblock content %}

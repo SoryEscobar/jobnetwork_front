@@ -7,7 +7,14 @@ from front.utilities.request_back_api import BackEndServiceConnection as be_api
 
 
 def job(request):
-    #Make the API request
     
     response = be_api().post('job')
     return render(request, 'jobs.html', {"jobs": response['results'], "pagetitle": "Jobs from POST" } )
+
+
+
+def job_id(request, jobid):
+   
+    response = be_api().get(f'job/{jobid}')       
+    return render(request, 'job.html', {"organization": response['serpTags']['hiringOrganization'],
+        "serpTags": response['serpTags'], "attachments":response['attachments'], "response": response, "pagetitle": "Job from GET"})
