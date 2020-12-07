@@ -1,0 +1,27 @@
+<!-- base.html -->
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="list-group">
+
+    {% for job in jobs %}
+    <a class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{ job.objective }}</h5>
+            <small>{{ job.locationName }}</small>
+        </div>
+
+        {% for organization in job.organizations %}
+            <p class="mb-1"> {{ organization.name }} </p>
+            <img src={{ organization.picture }}>
+        {% endfor %}
+
+        <small>{{ job.type }}</small>
+    </a>
+    {% endfor %}
+
+</div>
+
+{% endblock content %}

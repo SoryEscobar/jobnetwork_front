@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.http import JsonResponse
-from .utils.request_back_api import BackEnd as be
+from front.utilities.request_back_api import BackEndServiceConnection as be_api
 
 
 # Create your views here.
@@ -13,5 +13,5 @@ def default(request):
         
 
 def user(request):
-    users = be().get_user()
-    return render(request, 'user_view/home.html', {"users": users['results']})
+    users = be_api().post('user')
+    return render(request, 'users.html', {"users": users['results'], "pagetitle": "Users from POST"})

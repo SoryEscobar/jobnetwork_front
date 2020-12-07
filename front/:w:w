@@ -10,4 +10,5 @@ def job(request):
     #Make the API request
     
     response = be_api().post('job')
-    return render(request, 'jobs.html', {"jobs": response['results'], "pagetitle": "Jobs from POST" } )
+
+    return HttpResponse('<h2>Job endpoint working</h2>')
