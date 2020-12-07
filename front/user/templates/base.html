@@ -19,6 +19,8 @@
 
 
         <div class="container">
+            <a href="{% url 'user:User' %}" class="btn btn-primary btn-lg activate" role="button" aria-disabled="true">Users</a>
+            <a href="{% url 'job:Job' %}" class="btn btn-primary btn-lg activate" role="button" aria-disabled="true">Jobs</a>
 
             {% block content %} 
             {% endblock content %}
