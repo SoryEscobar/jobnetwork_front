@@ -23,6 +23,6 @@ from user import views
 urlpatterns = [
     path('admin/',          admin.site.urls),
     path('',                views.default, name="Landing"),
-    url('user/',            include(('user.urls', 'user'), namespace='user')),
-    url('job/',             include(('job.urls', 'job'), namespace='job')),
+    url('users/',            include(('user.urls', 'user'), namespace='user')),
+    url('jobs/',             include(('job.urls', 'job'), namespace='job')),
 ]
