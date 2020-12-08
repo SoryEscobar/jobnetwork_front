@@ -25,7 +25,7 @@ SECRET_KEY = '!k9-q!#!)#mkta_&di#ac7u30epqq42alerepe1$y-18bc_c0v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['torre-soryescobar.herokuapp.com']
 
 
 # Application definition

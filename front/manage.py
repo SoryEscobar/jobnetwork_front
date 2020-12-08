@@ -4,6 +4,7 @@ import os
 import sys
 
 
+
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'front.settings')
@@ -20,3 +21,16 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
+    import django
+    import os
+    django.setup()
+
+    # Override default port for `runserver` command
+    from django.core.management.commands.runserver import Command as runserver
+    port = int(os.environ.get("PORT", 5000))
+    runserver.default_port = port
+
+    from django.core.management import execute_from_command_line
+
+    execute_from_command_line(sys.argv)
