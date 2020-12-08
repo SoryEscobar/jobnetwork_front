@@ -1,5 +1,5 @@
-# TORRE Test Frontend
+# Torre test: Frontend
 
 
-## Check the final product here:
+### Check the final product here:
 https://torre-soryescobar.herokuapp.com/
