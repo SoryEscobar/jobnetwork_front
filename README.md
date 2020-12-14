@@ -4,12 +4,13 @@
 This is a sample web app that shows users and jobs from a renowned job network site (torre.co). Despite the fact that the presentation is still pretty rough, the functionality is working as expected.
 
 
+
 ### Technologies/Tools involved:
 
 * Python
 * Django
 * HTML
-* REST web services
+* RESTful web services
 * Jinja
 * Docker
 * Heroku
