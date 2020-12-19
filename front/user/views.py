@@ -14,10 +14,10 @@ def default(request):
         
 
 def user(request):
-    users = be_api().post('user')
+    users = be_api().post('users')
     return render(request, 'users.html', {"users": users['results'], "pagetitle": "Users from POST"})
 
 
 def user_id(request, username=None):
-    user = be_api().get(f'user/{username}')
+    user = be_api().get(f'users/{username}')
     return render(request, 'user.html', {"person": user['person'], "stats": user['stats'], "pagetitle": "User from GET"})

@@ -12,11 +12,13 @@ class BackEndServiceConnection():
 
     def post(self, endpoint):
         url = self.url + endpoint 
-
+        
         response = requests.post(url)
         return response.json()
 
+
     def get(self, endpoint):
         url = self.url + endpoint
+
         response = requests.get(url)
         return response.json()

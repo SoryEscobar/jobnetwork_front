@@ -10,11 +10,12 @@ This is a sample web app that shows users and jobs from a renowned job network s
 * Python
 * Django
 * HTML
-* RESTful web services
+* Bootstrap
 * Jinja
+* RESTful web services
 * Docker
 * Heroku
 
 
 ### Check the final product here:
-https://torre-soryescobar.herokuapp.com/
+https://jobnetwork-soryescobar.herokuapp.com/

@@ -1,4 +1,4 @@
-#!/Users/sory/programing_projects_2020/torretest_front/.venv/bin/python
+#!/Users/sory/torre/torretest_front/.venv/bin/python
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 

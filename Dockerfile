@@ -3,7 +3,7 @@ FROM python:3.8-slim-buster
 
 EXPOSE 8000
 # ENV API_BACKEND_URL='http://localhost:5000/'
-ENV API_BACKEND_URL='https://torretest-api.herokuapp.com/'
+ENV API_BACKEND_URL='https://jobnetwork-api-soryescobar.herokuapp.com/'
 
 # Keeps Python from generating .pyc files in the container
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -26,5 +26,3 @@ USER appuser
 # File wsgi.py was not found in subfolder: 'torretest_front'. Please enter the Python path to wsgi file.
 # CMD ["gunicorn", "--bind", "0.0.0.0:8000", "front.wsgi"]
 CMD ["gunicorn", "front.wsgi"]
-
-
